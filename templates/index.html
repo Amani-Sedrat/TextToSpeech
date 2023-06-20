@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TextToSpeech Converter</title>
+</head>
+<body>
+    <h1>Text-to-Speech Converter</h1>
+    <form action="/generate" method="post">
+        <textarea name="text" rows="5" cols="50" placeholder="Enter text"></textarea><br>
+        <input type="submit" value="Generate">
+    </form>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
+    <script>
+        function playAudio() {
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.src = "/generate";
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
